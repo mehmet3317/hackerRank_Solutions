@@ -27,10 +27,12 @@ public class PairProblemSolution {
         player.add(6);
         player.add(3);
         player.add(3);
-        int target=12;
+        player.add(11);
+
+        int target=22;
         Set<Set<Integer>> paired = new HashSet<>();
         for(int i=0; i<player.size(); i++){
-            for(int j=i+1; j<player.size()-1; j++){
+            for(int j=i+1; j<player.size(); j++){
                 if(player.get(i)+player.get(j)==target){
                     Set<Integer> pairs = new HashSet<>();
                     pairs.add(player.get(i));
@@ -38,7 +40,6 @@ public class PairProblemSolution {
                     paired.add(pairs);
                 }
             }
-
         }
         System.out.println(paired);
         System.out.println(paired.size());
